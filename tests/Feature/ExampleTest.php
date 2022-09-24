@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
+// use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
@@ -12,10 +12,15 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_the_application_returns_a_successful_response()
     {
+        //buka halaman awal
         $response = $this->get('/');
-
+        //pastikan ada tulisan login
+        $response->assertSeeText('Login');
+        $response->assertSeeText('Username');
+        $response->assertSeeText('Password');
+        //pastikan halaman bisa dibuka
         $response->assertStatus(200);
     }
 }

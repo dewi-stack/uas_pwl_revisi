@@ -167,7 +167,7 @@
                         </div>
                         <div class="card-body">
                             <div class="btn">
-                                <a class="btn btn-success" href="{{ route('buku.create') }}"> Tambah Data Buku </a>
+                                <a class="btn btn-success" href="{{ route('buku.create') }}" id="tambah-buku"> Tambah Data Buku </a>
                             </div>
                   <table id="bootstrap-data-table" class="table table-striped table-bordered">
                     <thead>

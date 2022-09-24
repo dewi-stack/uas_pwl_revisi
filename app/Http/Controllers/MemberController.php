@@ -113,8 +113,10 @@ class MemberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id_buku)
+    public function destroy($id_member)
     {
-        
+        Member::where('id_member', $id_member)->delete();
+        return redirect()->route('member.index')
+            ->with('success', 'Data Buku Berhasil Dihapus');
     }
 }
